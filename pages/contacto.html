@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="icon" href="../img/favicon.png">
+    <link rel="stylesheet" href="../estilos/estilos.css">
+    <title>Contacto | Meeple Gamers</title>
+</head>
+<body>
+    <div class="gridContainer">
+        <header class="header">
+            <h1 class="header__h1">Contacto</h1>
+            <nav class="header__nav">
+                <ul class="nav__ul">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="quienes-somos.html">Nosotros</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="tiendas.html">Tiendas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+                <ul class="nav__ul nav__ul-redes">
+                    <li><a href="http://instagram.com" target="_blank"><img class="nav__ul-img" src="../img/icon/instagram.png" alt="Icono de Instagram"></a></li>
+                    <li><a href="http://tiktok.com" target="_blank" ><img class="nav__ul-img" src="../img/icon/tik-tok.png" alt="Icono de TikTok"></a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main contacto">
+            <div>
+                <h2 class="animate__animated animate__fadeIn">¡Únete!</h2>
+                <form class="form" action="">
+                    <!-- Nombre, apellido, mail -->
+                    <label for="nombres">Nombres:</label><br>
+                    <input class='entrada' type="text" name="nombres" placeholder="Nombres"><br>
+                    <label for="apellidos">Apellidos:</label><br>
+                    <input class='entrada' type="text" name="apellidos" placeholder="Apellidos"><br>
+                    <label for="email">Email</label><br>
+                    <input class='entrada'type="email" placeholder="Email"><br>
+                    <!-- qué tipo de jugador eres -->
+                    <label for="jugador">¿Qué tipo de jugador te consideras?</label><br>
+                    <select class='select' id="jugador" name="jugador">
+                        <option class="opcion" value="principiante">Principiante</option>
+                        <option class="opcion" value="intermedio">Intermedio</option>
+                        <option class="opcion" value="avanzado">Avanzado</option>
+                    </select>
+                    <!-- Cómo nos conociste radio buttons -->
+                    <div>¿Cómo nos conociste?</div>
+                    <input class='radiobutton' type="radio" name="comoConociste" value="redes">
+                    <label for="comoConociste">Redes sociales</label><br>
+                    <input class='radiobutton' type="radio" name="comoConociste" value="publicidad">
+                    <label for="comoConociste">Publicidad</label><br>
+                    <input class='radiobutton' type="radio" name="comoConociste" value="amigos">
+                    <label for="comoConociste">Por otra persona</label><br>
+                    <input class='radiobutton' type="radio" name="comoConociste" value="tiendas">
+                    <label for="comoConociste">Tiendas</label><br>
+                    <!-- Botones -->
+                    <input class="boton-principal" type="submit" value="Enviar">
+                    <input class="boton-principal boton-borrar" type="reset" value="Borrar">
+                </form>   
+            </div>
+            <div id="imagen-formulario">
+                <img src="../img/formulario-imagen.svg" alt="ilustración de un juego de mesa">
+            </div>
+        </main>
+        <footer class="footer">
+            <a href="../index.html">Volver al inicio</a>
+            <p>Copyright (c) 2021 Joanna Company</p>
+        </footer>
+    </div>
+</body>
+</html>

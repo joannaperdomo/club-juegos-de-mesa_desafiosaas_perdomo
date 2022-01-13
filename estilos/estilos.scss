@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@200;700;900&display=swap');
+
+/* Paleta de colores */ 
+$amarillo: #e3b505;
+$azulPrincipal:#044b7f;
+$azulSecundario: #d4f5f5;
+$azulTerceario: #53a2be;
+$gris: #8c9a9e;
+$negro: black;
+$blanco: white;
+
+
+/* FONT FAMILY */
+
+$fuentePrincipal: 'Montserrat';
+$fuenteSecundaria: 'Roboto Slab';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body{
+    height: 100%;
+    background-color: $azulPrincipal;
+    background-image: linear-gradient($azulPrincipal, 70%, #053654);
+    color: $blanco;
+    display: block;
+    font-family: $fuenteSecundaria;
+}
+
+.gridContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto;
+
+    /* HEADER */
+
+    .header{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        color: $negro;
+        background-color:$amarillo;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        background-image: linear-gradient($amarillo 70%, #B79011);
+        box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
+
+        .header__h1{
+            font-family: $fuentePrincipal;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        /* NAV */
+
+        .header__nav{
+            display: flex;
+
+            ul{
+                display: flex;
+                list-style-type: none;
+
+                li{
+                    padding: 0px 5px 0px 5px;
+
+                    a{
+                        color: black;
+                        text-decoration: none;
+                        font-size: 14px;
+                        font-family: $fuentePrincipal;
+                        font-weight: 700;
+
+                        &:hover{
+                            color:$blanco;
+                        }
+
+                    }
+
+
+                }
+
+                img{
+                    width: 15px;
+
+                    &:hover{
+                        filter: invert(100%);
+                    }
+                }
+                
+            }
+        }
+    }
+
+    /* MAIN */
+
+    .main{
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+
+
+    /* FOOTER */
+    .footer{
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        font-size: 10px;
+        text-align: right;
+        padding-right: 20px;
+        padding-bottom: 5px;
+
+        a{
+            color: inherit;
+        }
+    }
+
+}
+
+/* HOME PAGE*/
+
+.main__entrada{
+    margin-top: 60px;
+    font-size: 16px;
+    text-align: left;
+}
+
+main h2{
+    font-size: 32px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.main__entrada-titulo{
+    font-size: 56px;
+    font-family: $fuentePrincipal;
+    margin-bottom: 10px;
+}
+
+
+#mapa{
+    width: 400px;
+    margin-top: 50px;
+    height: auto;
+}
+
+.characters{
+    width: 0px;
+}
+
+
+/* BOTONES */
+.boton-principal{
+    font-family: $fuentePrincipal;
+    text-decoration: none;
+    text-align: center;
+    background-color: $amarillo;
+    margin-top: 5px;
+    color: $negro;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    transition: all 0.3s;
+
+    &:hover{
+        color: $blanco;
+        transform: scale(1.2);
+    
+    }
+
+}
+
+.boton-borrar{
+    background-color: $azulTerceario;
+    
+}
+
+/* TABLETS AND SMALL SCREENS */
+
+@media  screen and (min-width:768px) {
+
+    /* HEADER */
+    .header{
+        padding: 10px 5px 10px 5px;
+
+        .header__nav{
+            justify-content: space-evenly;
+        }
+
+        .nav__ul-redes{
+            margin-left: 20px;
+        }
+
+        .nav__ul-img{
+            width: 15px;
+        }
+
+        .nav__ul li{
+            font-size: 14px;
+        }
+    }
+
+    /* HOME PAGE */
+
+    #mapa{
+            width: 600px;
+        }
+
+    .characters, .dado img{
+        width: 0px;
+    
+    }
+    
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 1250px) {    
+    body{
+        height: 100vh;
+    }
+
+    /* HEADER */
+    .header{
+        display: flex;
+        padding: 20px 20px 10px 20px;
+        
+        .header__h1{
+            margin-left: 30px;
+            font-size: 36px;
+            display: flex;
+        }
+
+        .header__nav{
+            display: flex;
+        } 
+
+        /* NAV */
+        nav ul{
+            align-items: center;
+
+            li{
+                font-size: 14px;
+                padding: 0px 20px 0px 20px;
+                margin: 5px;
+            }
+        }
+
+        .nav__ul-redes{
+            margin-left: 15px;
+        }
+    
+        .nav__ul-redes li{
+            padding: 5px;
+        }
+    
+    
+        .nav__ul-img{
+            width: 20px;
+            margin-right: 10px;
+        }    
+    
+    }
+
+
+    /* MAIN */
+
+    main{
+        align-items: center;
+        height: 70vh;
+
+        p{
+            font-size: 16px;
+        }
+
+        .main__entrada {
+            width: 40%;
+            display: flex;
+            text-align: left;
+            display: inline-block;
+            margin-right: 25px;
+        }
+    }
+
+    .main__entrada-titulo{
+        font-size: 48px;
+    }
+
+    /* Imagen */
+
+    .boardgame{
+        margin-right: -160px;
+    }
+    
+    #mapa{
+        width: 500px;
+        margin-top: 50px;
+    }
+
+    /* PERSONAJES DEL MAPA */
+    
+    .characters{
+        width: 45px;
+        position: relative;
+        animation-name: personajes;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+
+    }
+
+    #mago{
+        left: -200px;
+        top: -250px;
+    }
+
+    #caballero{
+        left: -200px;
+        top: -230px;
+    }
+
+    #princesa{
+        width: 45px;
+        position: relative;
+        left: -330px;
+        top: -250px;
+        animation-name: princesa;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;
+    }
+
+    #robin{
+        left: -200px;
+        top: -210px;
+    }
+
+    /* BOTONES */
+    .boton-principal{
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+/* XL */
+
+@media screen and (min-width: 1700px) {
+    /* MAIN */
+
+    main{
+        height: 80vh;
+    }
+
+    .main__entrada-titulo{
+        font-size: 68px;
+    }
+
+    /* Imagen */
+        
+    #mapa{
+        width: 600px;
+    }
+
+    #mago{
+        top: -300px;
+        left: -250px;
+    }
+
+    #caballero{
+        top: -280px;
+        left: -250px;
+    }
+
+    #princesa{
+        top: -320px;
+        left: -400px;
+
+    }
+
+    #robin{
+        top: -260px;
+        left: -250px;
+    }
+
+}
+
+/* Animacion para personajes que flotan */
+
+@keyframes personajes {
+    0%{
+        transform: translate(0px, 0px);
+    }
+    50%{
+        transform: translate(0px,-10px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
+
+/* Animación para la princesa */
+@keyframes princesa {
+    0%{
+        transform: translate(3px, 5px);
+    }
+
+    20%{
+        transform: translate(8px, 25px);
+    }
+
+    40%{
+        transform: translate(8px, 45px);
+    }
+
+    60%{
+        transform: translate(8px, 65px);
+    }
+
+    80%{
+        transform: translate(8px, 85px);
+    }
+    100%{
+        transform: translate(18px, 115px);
+    }
+}
